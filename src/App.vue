@@ -14,7 +14,7 @@ export default {
     HelloWorld
   },
   created() {
-      //this.$noty.info("Your pizza has been saved!")
+      this.$noty.info("Your pizza has been saved!")
   }
 }
 </script>
