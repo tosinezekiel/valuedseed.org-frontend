@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>valuedseed-frontend</title>
+    <meta charset="utf-8">
+    <title>ValuedSeed Official Site</title>
+    <meta name="keywords" content="Online School, Online Learning, E-Learning, Educational Portal" />
+    <meta name="description" content="ValuedSeed Education, Online School">
+    <meta name="author" content="valuedseed educational portal">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+ 
+    <!-- Web Fonts  -->
+   <link rel="stylesheet" href="assets/customMain.css">
   </head>
   <body>
     <noscript>
@@ -13,5 +22,96 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+  </script>
+
+  <script src="assets/vendor/jquery/jquery.js"></script>
+  <script src="assets/vendor/jquery/jquery.nav.js"></script>
+  <script src="assets/vendor/jquery/jquery.validate.js"></script>
+  <script src="assets/vendor/jquery.appear/jquery.appear.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/jquery-cookie/jquery-cookie.min.js"></script>
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+  <script src="assets/vendor/modernizr/modernizr.min.js"></script>
+  <script src="assets/vendor/tether/tether.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/vendor/menuzord/menuzord.js"></script>
+  <script src="assets/vendor/sticky/jquery.sticky.min.js"></script>
+  <script src="assets/vendor/isotope/jquery.isotope.min.js"></script>
+  <script src="assets/vendor/respond/respond.js"></script>
+  <script src="assets/vendor/images-loaded/imagesloaded.js"></script>
+  <script src="assets/vendor/owl-carousel/owl.carousel.js"></script>
+  <script src="assets/vendor/wow/wow.min.js"></script>
+  <script src="assets/vendor/lite-tooltip/js/litetooltip.js"></script>
+  <script src="assets/js/theme-plugins.js"></script>
+
+  <script src="assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+  <script src="assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+  <script src="assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+
+  <!-- Current Page Vendor and Views -->
+  <script src="assets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+  <script src="assets/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!-- Theme Initialization -->
+  <script src="assets/js/theme.js"></script>
+
+  <!-- Custom JS -->
+  <script src="assets/js/custom.js"></script>
+
+  <!-- Style Swicher -->
+  <script src="assets/vendor/style-switcher/style.switcher.js" id="styleSwitcherScript" data-base-path="" data-skin-src=""></script>
+  <script src="assets/vendor/style-switcher/style.switcher.localstorage.js"></script>
+
+  <script type="text/javascript">
+     var tpj = jQuery;
+
+     var revapi6;
+     tpj(document).ready(function () {
+        if (tpj("#rev_slider_6_1").revolution == undefined) {
+           revslider_showDoubleJqueryError("#rev_slider_6_1");
+        } else {
+           revapi6 = tpj("#rev_slider_6_1").show().revolution({
+              sliderType: "hero",
+              jsFileLocation: "include/rs-plugin/js/",
+              sliderLayout: "fullscreen",
+              dottedOverlay: "none",
+              delay: 9000,
+              navigation: {
+              },
+              responsiveLevels: [1240, 1024, 778, 480],
+              visibilityLevels: [1240, 1024, 778, 480],
+              gridwidth: [1240, 1024, 778, 480],
+              gridheight: [868, 768, 960, 720],
+              lazyType: "none",
+              parallax: {
+                 type: "scroll",
+                 origo: "slidercenter",
+                 speed: 400,
+                 levels: [10, 15, 20, 25, 30, 35, 40, -10, -15, -20, -25, -30, -35, -40, -45, 55],
+                 type: "scroll",
+              },
+              shadow: 0,
+              spinner: "off",
+              autoHeight: "off",
+              fullScreenAutoWidth: "off",
+              fullScreenAlignForce: "off",
+              fullScreenOffsetContainer: "",
+              fullScreenOffset: "",
+              disableProgressBar: "on",
+              hideThumbsOnMobile: "off",
+              hideSliderAtLimit: 0,
+              hideCaptionAtLimit: 0,
+              hideAllCaptionAtLilmit: 0,
+              debugMode: false,
+              fallbacks: {
+                 simplifyAll: "off",
+                 disableFocusListener: false,
+              }
+           });
+        }
+     });	/*ready*/
+  </script>
+
   </body>
 </html>
