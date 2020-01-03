@@ -5,7 +5,7 @@ import VueAxios from 'vue-axios'
 import Vuex from 'vuex'
 import VueNoty from 'vuejs-noty'
 import App from './App.vue'
-import routes from  './routes'
+import router from  './router'
 import store from  './store'
 
 Vue.use(VueNoty, {
@@ -19,7 +19,7 @@ Vue.use(VueRouter)
 Vue.config.productionTip = false
 import 'vuejs-noty/dist/vuejs-noty.css'
 new Vue({
-  routes,
+  router,
   store,
   render: h => h(App),
 }).$mount('#app')
