@@ -16,10 +16,6 @@
                 <router-link class="u-link-v5 g-color-main g-color-primary--hover" to="/">Home</router-link>
                 <i class="g-color-gray-light-v2 g-ml-5">/</i>
               </li>
-              <li class="list-inline-item g-mr-5">
-                <router-link class="u-link-v5 g-color-main g-color-primary--hover" to="/login">Login</router-link>
-                <i class="g-color-gray-light-v2 g-ml-5">/</i>
-              </li>
               <li class="list-inline-item g-color-primary">
                 <span>Password Reset</span>
               </li>
