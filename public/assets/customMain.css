@@ -1,6 +1,5 @@
-
 @import url("vendor/tether/tether.min.css");
-@import url("vendor/bootstrap/css/bootstrap.min.css");
+/* @import url("vendor/bootstrap/css/bootstrap.min.css"); */
 @import url("vendor/font-awesome/css/font-awesome.min.css");
 @import url("vendor/bootstrap/css/glyphicon.css");
 @import url("vendor/ion-icons/css/ionicons.min.css");
@@ -31,9 +30,18 @@
 @import url("sliders/master-slider/classic-sliders/fullscreen/style/ms-fullscreen.css");
 @import url("sliders/master-slider/classic-sliders/videogallery/style/ms-videogallery.css");
 
+@import url("vendor/bootstrap/bootstrap.min.css");
+@import url("vendor/icon-awesome/css/font-awesome.min.css");
+@import url("vendor/icon-line-pro/style.css");
+@import url("vendor/icon-hs/style.css");
+@import url("vendor/animate.css");
+@import url("vendor/hs-megamenu/src/hs.megamenu.css");
+@import url("vendor/hamburgers/hamburgers.min.css");
 
-@import url("css/unify-globals.css"); 
+@import url("css/unify-core.css");
+@import url("css/unify-components.css");
+@import url("css/unify-globals.css");
 
-
-
+@import url("vendor/icon-line-pro/style.css");
+@import url("vendor/icon-hs/style.css");
 @import url("css/custom.css");

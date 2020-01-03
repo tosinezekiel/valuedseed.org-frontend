@@ -10,6 +10,11 @@ export default {
   name: "app",
   components: {
     
+  },
+  watch:{
+    '$route' (to){
+      document.title = to.meta.title + '  || ValuedSeed Official Site'
+    }
   }
 };
 </script>
