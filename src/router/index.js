@@ -7,6 +7,8 @@ import Shop from '@/views/Shop'
 import Login from '@/views/Login'
 import PasswordReset from '@/views/PasswordReset'
 import Contact from '@/views/Contact'
+import FAQ from '@/views/FAQ'
+
 
 Vue.use(VueRouter)
 
@@ -51,6 +53,14 @@ export default new VueRouter({
             component: Contact,
             meta:{
                 title: 'Contact Us'
+            }
+        },
+        {
+            path: '/faq',
+            name: 'faq',
+            component: FAQ,
+            meta:{
+                title: 'Frequently Asked Questions'
             }
         }
     ],

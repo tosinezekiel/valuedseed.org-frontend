@@ -67,22 +67,26 @@
               <div class="row">
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Name</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="John Doe">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15"
+                    style="height:55px" type="text" placeholder="John Doe">
                 </div>
 
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Email</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="email" placeholder="johndoe@gmail.com">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
+                    style="height:55px" type="email" placeholder="johndoe@gmail.com">
                 </div>
 
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Subject</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="Feedback">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
+                    style="height:55px" type="text" placeholder="Feedback">
                 </div>
 
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Phone</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="tel" placeholder="+ (01) 222 33 44">
+                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
+                    style="height:55px" type="tel" placeholder="+ (01) 222 33 44">
                 </div>
 
                 <div class="col-md-12 form-group g-mb-40">
@@ -116,3 +120,104 @@ export default {
   }
 };
 </script> 
+
+<style scoped>
+/* Button Primary */
+.u-btn-primary {
+  color: #fff;
+  background-color: #72c02c;
+}
+
+.u-btn-primary:hover, .u-btn-primary.active {
+  border-color: #8cd54a;
+  background-color: #8cd54a;
+}
+
+.u-btn-primary:hover, .u-btn-primary:focus, .u-btn-primary.active {
+  color: #fff;
+}
+
+.u-btn-primary.g-btn-hover-reset:hover, .u-btn-primary.g-btn-hover-reset.active {
+  background-color: #72c02c;
+  border-color: #72c02c;
+}
+
+.u-btn-primary.u-btn-hover-v1-1 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-1::after, .u-btn-primary.u-btn-hover-v1-1:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-1:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-2 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-2::after, .u-btn-primary.u-btn-hover-v1-2:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-2:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-3 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-3::after, .u-btn-primary.u-btn-hover-v1-3:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-3:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-4 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-4::after, .u-btn-primary.u-btn-hover-v1-4:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-4:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-1 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-1::after, .u-btn-primary.u-btn-hover-v2-1:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v2-1:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-2 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-2::after, .u-btn-primary.u-btn-hover-v2-2:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v2-2:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+</style>

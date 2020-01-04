@@ -50,6 +50,7 @@
                     class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="email"
                     placeholder="johndoe@gmail.com"
+                    style="height:55px"
                   />
                 </div>
               </div>
@@ -84,3 +85,104 @@ export default {
   }
 };
 </script> 
+
+<style scoped>
+/* Button Primary */
+.u-btn-primary {
+  color: #fff;
+  background-color: #72c02c;
+}
+
+.u-btn-primary:hover, .u-btn-primary.active {
+  border-color: #8cd54a;
+  background-color: #8cd54a;
+}
+
+.u-btn-primary:hover, .u-btn-primary:focus, .u-btn-primary.active {
+  color: #fff;
+}
+
+.u-btn-primary.g-btn-hover-reset:hover, .u-btn-primary.g-btn-hover-reset.active {
+  background-color: #72c02c;
+  border-color: #72c02c;
+}
+
+.u-btn-primary.u-btn-hover-v1-1 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-1::after, .u-btn-primary.u-btn-hover-v1-1:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-1:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-2 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-2::after, .u-btn-primary.u-btn-hover-v1-2:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-2:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-3 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-3::after, .u-btn-primary.u-btn-hover-v1-3:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-3:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-4 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v1-4::after, .u-btn-primary.u-btn-hover-v1-4:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v1-4:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-1 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-1::after, .u-btn-primary.u-btn-hover-v2-1:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v2-1:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-2 {
+  overflow: hidden;
+}
+
+.u-btn-primary.u-btn-hover-v2-2::after, .u-btn-primary.u-btn-hover-v2-2:hover::after {
+  background-color: #7fd135;
+}
+
+.u-btn-primary.u-btn-hover-v2-2:hover {
+  background-color: #72c02c;
+  overflow: hidden;
+}
+
+</style>
