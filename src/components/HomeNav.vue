@@ -55,6 +55,7 @@
   </header>
 </template>
 <script>
+
 import navUl from "../components/navigation.vue";
 export default {
   name: "HomeNav",
@@ -63,3 +64,4 @@ export default {
   }
 };
 </script>
+

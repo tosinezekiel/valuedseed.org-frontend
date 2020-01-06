@@ -47,11 +47,11 @@
     font-style: normal;
 }
 
-@font-face {
+/*@font-face {
    font-family: 'entypo-fontello';
    src: url('../fonts/entypo-fontello.html') format('woff'), url('../fonts/entypo-fontello-2.html') format('svg'), url('../fonts/entypo-fontello-3.html') format('embedded-opentype');
 }
-
+*/
 
 a,
 a:hover,

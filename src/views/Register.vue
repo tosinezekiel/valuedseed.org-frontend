@@ -7,7 +7,7 @@
       <div class="container">
         <div class="d-sm-flex text-center">
           <div class="align-self-center">
-            <h2 class="h3 g-font-weight-300 w-100 g-mb-10 g-mb-0--md">Login</h2>
+            <h2 class="h3 g-font-weight-300 w-100 g-mb-10 g-mb-0--md">Register</h2>
           </div>
 
           <div class="align-self-center ml-auto">
@@ -17,7 +17,7 @@
                 <i class="g-color-gray-light-v2 g-ml-5">/</i>
               </li>
               <li class="list-inline-item g-color-primary">
-                <span>Login</span>
+                <span>Register</span>
               </li>
             </ul>
           </div>
@@ -32,11 +32,12 @@
         <div class="col-sm-8 col-lg-6">
           <div class="g-brd-around g-brd-gray-light-v4 rounded g-py-40 g-px-30">
             <header class="text-center mb-4">
-              <h2 class="h2 g-color-black g-font-weight-600">Login</h2>
+              <h2 class="h2 g-color-black g-font-weight-600">Create New Account</h2>
             </header>
 
             <!-- Form -->
             <form class="g-py-15">
+                  <label>Account Name</label>
               <div class="mb-4">
                 <div class="input-group g-brd-primary--focus">
                   <div class="input-group-prepend">
@@ -44,6 +45,24 @@
                       class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"
                     >
                       <i class="icon-finance-067 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <input
+                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    type="text"
+                    placeholder="Name"
+                    style="height:55px"
+                  />
+                </div>
+              </div>
+              <div class="mb-4">
+                  <label>Email Address </label>
+                <div class="input-group g-brd-primary--focus">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"
+                    >
+                      <i class="icon-communication-062 u-line-icon-pro"></i>
                     </span>
                   </div>
                   <input
@@ -56,6 +75,7 @@
               </div>
 
               <div class="g-mb-35">
+                  <label>Password </label>
                 <div class="input-group g-brd-primary--focus mb-4">
                   <div class="input-group-prepend">
                     <span
@@ -71,24 +91,28 @@
                     style="height:55px"
                   />
                 </div>
-
-                <div class="row justify-content-between">
-                  <div class="col align-self-center">
-                    <label class="form-check-inline u-check g-color-gray-dark-v5 g-font-size-12 g-pl-25 mb-0">
-                      <input class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0" type="checkbox" />
-                      <div class="u-check-icon-checkbox-v6 g-absolute-centered--y g-left-0">
-                        <i class="fa g-rounded-2" data-check-icon="#xf00c"></i>
-                      </div>Keep signed in
-                    </label>
+              </div>
+              <div class="g-mb-35">
+                  <label>Confirm Password </label>
+                <div class="input-group g-brd-primary--focus mb-4">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"
+                    >
+                      <i class="icon-media-094 u-line-icon-pro"></i>
+                    </span>
                   </div>
-                  <div class="col align-self-center text-right">
-                    <router-link class="g-font-size-12" to="/password-reset">Forgot password?</router-link>
-                  </div>
+                  <input
+                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    type="password"
+                    placeholder="Confirm Password"
+                    style="height:55px"
+                  />
                 </div>
               </div>
 
               <div class="mb-4">
-                <button class="btn btn-md btn-block u-btn-primary g-py-13" type="button">Login</button>
+                <button class="btn btn-md btn-block u-btn-primary g-py-13" type="button">Create</button>
               </div>
             </form>
             <!-- End Form -->
