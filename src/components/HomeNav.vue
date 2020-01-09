@@ -10,9 +10,9 @@
           <div class="header-column">
             <div class="header-row">
               <div class="header-logo">
-                <a href="index.html">
+                <router-link to="/">
                   <img alt="ValuedSeed" width="120" height="80" src="assets/img/logo.png" />
-                </a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -20,7 +20,7 @@
             <div class="header-row">
               <div class="header-nav header-nav-top-line">
                 <div class="header-nav-main header-nav-main-effect-2 header-nav-main-sub-effect-1">
-                  <navUl/>
+                  <navUl />
                 </div>
                 <ul class="header-social-icons social-icons d-none d-sm-block">
                   <li class="social-icons-facebook">
@@ -55,6 +55,7 @@
   </header>
 </template>
 <script>
+
 import navUl from "../components/navigation.vue";
 export default {
   name: "HomeNav",
@@ -63,3 +64,4 @@ export default {
   }
 };
 </script>
+
