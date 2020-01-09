@@ -53,6 +53,11 @@
 
   <!-- Theme Initialization -->
   <script src="assets/js/theme.js"></script>
+  <script src="assets/js/hs.core.js"></script>
+  <script src="assets/js/hs.header.js"></script>
+  <script src="assets/js/hs.hamburgers.js"></script>
+  <script src="assets/js/hs.tabs.js"></script>
+  <script src="assets/js/hs.go-to.js"></script>
 
   <!-- Custom JS -->
   <script src="assets/js/custom.js"></script>
@@ -107,6 +112,35 @@
         }
      });	/*ready*/
   </script>
+
+<script>
+   $(document).on('ready', function () {
+       // initialization of tabs
+       $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+       // initialization of go to
+       $.HSCore.components.HSGoTo.init('.js-go-to');
+     });
+
+     $(window).on('load', function () {
+       // initialization of header
+       $.HSCore.components.HSHeader.init($('#js-header'));
+       $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+       // initialization of HSMegaMenu component
+       $('.js-mega-menu').HSMegaMenu({
+         event: 'hover',
+         pageContainer: $('.container'),
+         breakpoint: 991
+       });
+     });
+
+     $(window).on('resize', function () {
+       setTimeout(function () {
+         $.HSCore.components.HSTabs.init('[role="tablist"]');
+       }, 200);
+     });
+ </script>
 
   </body>
 </html>

@@ -7,7 +7,7 @@
       <div class="container">
         <div class="d-sm-flex text-center">
           <div class="align-self-center">
-            <h2 class="h3 g-font-weight-300 w-100 g-mb-10 g-mb-0--md">Password Reset</h2>
+            <h2 class="h3 g-font-weight-300 w-100 g-mb-10 g-mb-0--md">Register</h2>
           </div>
 
           <div class="align-self-center ml-auto">
@@ -17,7 +17,7 @@
                 <i class="g-color-gray-light-v2 g-ml-5">/</i>
               </li>
               <li class="list-inline-item g-color-primary">
-                <span>Password Reset</span>
+                <span>Register</span>
               </li>
             </ul>
           </div>
@@ -32,11 +32,12 @@
         <div class="col-sm-8 col-lg-6">
           <div class="g-brd-around g-brd-gray-light-v4 rounded g-py-40 g-px-30">
             <header class="text-center mb-4">
-              <h2 class="h2 g-color-black g-font-weight-600">Password Reset</h2>
+              <h2 class="h2 g-color-black g-font-weight-600">Create New Account</h2>
             </header>
 
             <!-- Form -->
             <form class="g-py-15">
+                  <label>Account Name</label>
               <div class="mb-4">
                 <div class="input-group g-brd-primary--focus">
                   <div class="input-group-prepend">
@@ -48,6 +49,24 @@
                   </div>
                   <input
                     class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    type="text"
+                    placeholder="Name"
+                    style="height:55px"
+                  />
+                </div>
+              </div>
+              <div class="mb-4">
+                  <label>Email Address </label>
+                <div class="input-group g-brd-primary--focus">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"
+                    >
+                      <i class="icon-communication-062 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <input
+                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="email"
                     placeholder="johndoe@gmail.com"
                     style="height:55px"
@@ -55,16 +74,53 @@
                 </div>
               </div>
 
+              <div class="g-mb-35">
+                  <label>Password </label>
+                <div class="input-group g-brd-primary--focus mb-4">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"
+                    >
+                      <i class="icon-media-094 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <input
+                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    type="password"
+                    placeholder="Password"
+                    style="height:55px"
+                  />
+                </div>
+              </div>
+              <div class="g-mb-35">
+                  <label>Confirm Password </label>
+                <div class="input-group g-brd-primary--focus mb-4">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"
+                    >
+                      <i class="icon-media-094 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <input
+                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    type="password"
+                    placeholder="Confirm Password"
+                    style="height:55px"
+                  />
+                </div>
+              </div>
+
               <div class="mb-4">
-                <button class="btn btn-md btn-block u-btn-primary g-py-13" type="button">Reset</button>
+                <button class="btn btn-md btn-block u-btn-primary g-py-13" type="button">Create</button>
               </div>
             </form>
             <!-- End Form -->
 
             <footer class="text-center">
               <p class="g-color-gray-dark-v5 g-font-size-13 mb-0">
-                Have an account?
-                <router-link class="g-font-weight-600" to="/login">Login</router-link>
+                Don't have an account?
+                <router-link class="g-font-weight-600" to="/register">signup</router-link>
               </p>
             </footer>
           </div>
@@ -79,13 +135,12 @@
 import HomeNav from "../components/HomeNav.vue";
 import Footer from "../components/Footer.vue";
 export default {
-  name: "Shop",
+  name: "Login",
   components: {
     HomeNav, Footer
   }
 };
 </script> 
-
 <style scoped>
 /* Button Primary */
 .u-btn-primary {
