@@ -1,7 +1,5 @@
 <template>
     <div>
-    <HomeNav />
-
     <!-- Breadcrumbs -->
     <section class="g-bg-gray-light-v5 g-py-50">
       <div class="container">
@@ -103,17 +101,13 @@
         </div>
       </div>
     </section>
-    <Footer />
   </div>
 </template>
 
 <script>
-import HomeNav from "../components/HomeNav.vue";
-import Footer from "../components/Footer.vue";
 export default {
   name: "Login",
   components: {
-    HomeNav, Footer
   }
 };
 </script> 

@@ -1,7 +1,6 @@
 <template>
     <div class="wrapper">
       <div class="page">
-         <HomeNav></HomeNav>
         <Revslider></Revslider>
         <div class="page-inner p-none no-border">
           <WelcomeSection></WelcomeSection>
@@ -13,13 +12,11 @@
           <Testimonial></Testimonial>
           <PurchaseAction></PurchaseAction>
         </div>
-        <Footer></Footer>
       </div>
     </div>
 </template>
 <!-- Vendor -->
 <script>
-import HomeNav from "../components/HomeNav.vue";
 import Revslider from "../components/Revslider.vue";
 import WelcomeSection from "../components/WelcomeSection.vue";
 import CoreFeatures from "../components/CoreFeatures.vue";
@@ -29,11 +26,9 @@ import SchoolSupport from "../components/SchoolSupport.vue";
 import Udiscover from "../components/Udiscover.vue";
 import Testimonial from "../components/Testimonial.vue";
 import FeatureProducts from "../components/FeatureProducts.vue";
-import Footer from "../components/Footer.vue";
 export default {
   name: "Home",
   components: {
-    HomeNav,
     Revslider,
     WelcomeSection,
     CoreFeatures,
@@ -42,8 +37,7 @@ export default {
     Udiscover,
     SchoolSupport,
     Testimonial,
-    PurchaseAction,
-    Footer
+    PurchaseAction
   }
 };
 </script>
