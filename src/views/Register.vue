@@ -33,10 +33,22 @@
               <h2 class="h2 g-color-black g-font-weight-600">Create New Account</h2>
             </header>
 
+          <!--   <p v-if="errors.length">
+              <b>Please correct the following error(s):</b>
+              <ul>
+                <li v-for="(error, index) in errors" v-bind:key="index">{{ error }}</li>
+              </ul>
+            </p> -->
+            <div v-if="success.length">
+              <span class="u-btn-primary g-py-13 btn p-5  g-px-15 mb-4 col-lg-12" v-for="(suces, index) in success" v-bind:key="index"> 
+                <h5>Congratulations! {{suces}}</h5>
+                Account Created Successfully. <br/> kindly login to continue
+              </span>
+            </div>
             <!-- Form -->
             <form class="g-py-15">
-                  <label>Account Name</label>
               <div class="mb-4">
+                  <label>First Name</label>
                 <div class="input-group g-brd-primary--focus">
                   <div class="input-group-prepend">
                     <span
@@ -46,7 +58,25 @@
                     </span>
                   </div>
                   <input
-                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    v-model="first_name" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    type="text"
+                    placeholder="Name"
+                    style="height:55px"
+                  />
+                </div>
+              </div>
+              <div class="mb-4">
+                  <label>Last Name</label>
+                <div class="input-group g-brd-primary--focus">
+                  <div class="input-group-prepend">
+                    <span
+                      class="input-group-text g-width-45 g-brd-right-none g-brd-gray-light-v4 g-color-gray-dark-v5"
+                    >
+                      <i class="icon-finance-067 u-line-icon-pro"></i>
+                    </span>
+                  </div>
+                  <input
+                    v-model="last_name" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="text"
                     placeholder="Name"
                     style="height:55px"
@@ -64,7 +94,7 @@
                     </span>
                   </div>
                   <input
-                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    v-model="email" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="email"
                     placeholder="johndoe@gmail.com"
                     style="height:55px"
@@ -83,7 +113,7 @@
                     </span>
                   </div>
                   <input
-                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    v-model="password"  class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="password"
                     placeholder="Password"
                     style="height:55px"
@@ -101,7 +131,7 @@
                     </span>
                   </div>
                   <input
-                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    v-model="password_confirmation" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="password"
                     placeholder="Confirm Password"
                     style="height:55px"
@@ -110,7 +140,7 @@
               </div>
 
               <div class="mb-4">
-                <button class="btn btn-md btn-block u-btn-primary g-py-13" type="button">Create</button>
+                <button class="btn btn-md btn-block u-btn-primary g-py-13" v-on:click="register" type="button">Create</button>
               </div>
             </form>
             <!-- End Form -->
@@ -131,9 +161,72 @@
 <script>
 export default {
   name: "Login",
+  data(){
+    return {
+      first_name:null,
+      last_name:null,
+      email:null,
+      password:null,
+      password_confirmation:null,
+      errors: [],
+      success: []
+    }
+  }, 
+  methods: {
+    
+    register(e) {
+
+      this.errors = [];
+      this.success = [];
+
+      if (!this.first_name) {
+        this.errors.push('First name is required.');
+      }
+      if (!this.last_name) {
+        this.errors.push('Last name is required.');
+      }
+      if (!this.email) {
+        this.errors.push('Email address is required.');
+      }
+      if (!this.password) {
+        this.errors.push('Password is required.');
+      }
+      if (!this.password_confirmation) {
+        this.errors.push('Confirm your password.');
+      }
+       if (this.password != this.password_confirmation) {
+        this.errors.push('Please confirm your correct password.');
+        // return true;
+      }
+
+      for (const error in this.errors){
+        return this.$noty.warning(this.errors[error]);
+      }
+      e.preventDefault();
+      const formData = new FormData();
+      formData.append('first_name', this.first_name);
+      formData.append('last_name', this.last_name);
+      formData.append('email', this.email);
+      formData.append('password', this.password);
+      formData.append('password_confirmation', this.password_confirmation);
+
+      this.$http
+        .post('api/register', formData)
+        .then(response => {
+            console.log(response);
+            this.success.push('Congratulations! '+this.first_name+' '+this.last_name);
+            this.first_name = null;
+              this.last_name = null;
+              this.email = null;
+              this.password = null;
+              this.password_confirmation = null;
+              this.errors  =  []
+          });
+        },
+      },
   components: {
   
-  }
+  },
 };
 </script> 
 <style scoped>
