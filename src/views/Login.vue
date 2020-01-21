@@ -45,7 +45,7 @@
                     </span>
                   </div>
                   <input
-                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    v-model="useremail" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="email"
                     placeholder="johndoe@gmail.com"
                     style="height:55px"
@@ -63,7 +63,7 @@
                     </span>
                   </div>
                   <input
-                    class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    v-model="password" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="password"
                     placeholder="Password"
                     style="height:55px"
@@ -86,7 +86,7 @@
               </div>
 
               <div class="mb-4">
-                <button class="btn btn-md btn-block u-btn-primary g-py-13" type="button">Login</button>
+                <button class="btn btn-md btn-block u-btn-primary g-py-13" v-on:click="submit" type="button">Login</button>
               </div>
             </form>
             <!-- End Form -->
@@ -107,6 +107,53 @@
 <script>
 export default {
   name: "Login",
+  data(){
+    return{
+      errors: [],
+      success: [],
+      failure: [],
+      useremail: null,
+      password: null
+    }
+  },
+  methods:{
+    submit(event){
+      this.errors = [];
+      this.success = [];
+      this.failure = [];
+
+      if (!this.useremail) {
+        this.errors.push('Provide your email address.');
+      }
+      if (!this.password) {
+        this.errors.push('Provide your account password.');
+      }
+      for (const error in this.errors){
+        return this.$noty.warning(this.errors[error]);
+      }
+
+      for (const fail in this.failure){
+        return this.$noty.error(this.failure[fail]);
+      }
+
+      event.preventDefault();
+      const formData = new FormData();
+      formData.append('email', this.useremail);
+      formData.append('password', this.password);
+      this.$http
+        .post('api/login', formData)
+        .then(response => {
+            //console.log(response);
+            this.useremail = null;
+            this.password = null;
+            this.success = response;
+          })
+        .catch(data => {
+          this.errors.push(data);
+          console.log(data);
+        });
+    }
+  },
   components: {
   }
 };
