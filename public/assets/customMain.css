@@ -17,6 +17,11 @@
 @import url("css/utilities.css");
 @import url("css/skins/default.css");
 
+  @import url("vendor/icon-awesome/css/font-awesome.min.css");
+  @import url("vendor/icon-line/css/simple-line-icons.css");
+  @import url("vendor/icon-etlinefont/style.css");
+  @import url("vendor/icon-line-pro/style.css");
+  @import url("vendor/icon-hs/style.css");
 @import url("vendor/rs-plugin/css/settings.css");
 @import url("vendor/rs-plugin/css/layers.css");
 @import url("vendor/rs-plugin/css/navigation.css");

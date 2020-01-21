@@ -1,8 +1,5 @@
 <template>
-    <div>
-    <HomeNav />
-
-    <!-- Promo Block -->
+    <div>    <!-- Promo Block -->
     <section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall " data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
       <!-- Parallax Image -->
       <div class="divimage dzsparallaxer--target w-100 g-bg-cover g-bg-size-cover g-bg-pos-top-center g-bg-black-opacity-0_2--after" style="height: 140%; background-image: url(assets/img-temp/img2.jpg);"></div>
@@ -106,17 +103,14 @@
     <!-- End Contact Form -->
 
 
-    <Footer />
   </div>
 </template>
 
 <script>
-import HomeNav from "../components/HomeNav.vue";
-import Footer from "../components/Footer.vue";
 export default {
-  name: "Shop",
+  name: "Contact",
   components: {
-    HomeNav, Footer
+    
   }
 };
 </script> 
