@@ -1,15 +1,19 @@
 <template>
   <div id="app">
-    <router-view />
+    <HomeNav/>
+      <router-view />
+    <Footer/>
   </div>
 </template>
 
 <script>
-// import Home from "./views/Home.vue";
+import HomeNav from "./components/HomeNav.vue";
+import Footer from "./components/Footer.vue";
+
 export default {
   name: "app",
   components: {
-    
+    HomeNav, Footer
   },
   watch:{
     '$route' (to){

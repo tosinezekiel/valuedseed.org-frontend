@@ -23,44 +23,67 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
 
-  <script src="assets/vendor/jquery/jquery.js"></script>
-  <script src="assets/vendor/jquery/jquery.nav.js"></script>
-  <script src="assets/vendor/jquery/jquery.validate.js"></script>
-  <script src="assets/vendor/jquery.appear/jquery.appear.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/jquery-cookie/jquery-cookie.min.js"></script>
-  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
-  <script src="assets/vendor/modernizr/modernizr.min.js"></script>
-  <script src="assets/vendor/tether/tether.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/vendor/menuzord/menuzord.js"></script>
-  <script src="assets/vendor/sticky/jquery.sticky.min.js"></script>
-  <script src="assets/vendor/isotope/jquery.isotope.min.js"></script>
-  <script src="assets/vendor/respond/respond.js"></script>
-  <script src="assets/vendor/images-loaded/imagesloaded.js"></script>
-  <script src="assets/vendor/owl-carousel/owl.carousel.js"></script>
-  <script src="assets/vendor/wow/wow.min.js"></script>
-  <script src="assets/vendor/lite-tooltip/js/litetooltip.js"></script>
-  <script src="assets/js/theme-plugins.js"></script>
+  <script src="./assets/vendor/jquery/jquery.js"></script>
+  <script src="./assets/vendor/jquery/jquery.nav.js"></script>
+  <script src="./assets/vendor/jquery/jquery.validate.js"></script>
+  <script src="./assets/vendor/jquery.appear/jquery.appear.min.js"></script>
+  <script src="./assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="./assets/vendor/jquery-cookie/jquery-cookie.min.js"></script>
+  <script src="./assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+  <script src="./assets/vendor/modernizr/modernizr.min.js"></script>
+  <script src="./assets/vendor/tether/tether.min.js"></script>
+  <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./assets/vendor/menuzord/menuzord.js"></script>
+  <script src="./assets/vendor/sticky/jquery.sticky.min.js"></script>
+  <script src="./assets/vendor/isotope/jquery.isotope.min.js"></script>
+  <script src="./assets/vendor/respond/respond.js"></script>
+  <script src="./assets/vendor/images-loaded/imagesloaded.js"></script>
+  <script src="./assets/vendor/owl-carousel/owl.carousel.js"></script>
+  <script src="./assets/vendor/wow/wow.min.js"></script>
+  <script src="./assets/vendor/lite-tooltip/js/litetooltip.js"></script>
+  <script src="./assets/js/theme-plugins.js"></script>
 
-  <script src="assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
-  <script src="assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
-  <script src="assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+  <script src="./assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+  <script src="./assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+  <script src="./assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
 
   <!-- Current Page Vendor and Views -->
-  <script src="assets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-  <script src="assets/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="./assets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+  <script src="./assets/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
   <!-- Theme Initialization -->
-  <script src="assets/js/theme.js"></script>
-  <script src="assets/js/hs.core.js"></script>
-  <script src="assets/js/hs.header.js"></script>
-  <script src="assets/js/hs.hamburgers.js"></script>
-  <script src="assets/js/hs.tabs.js"></script>
-  <script src="assets/js/hs.go-to.js"></script>
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/hs.core.js"></script>
+  <script src="./assets/js/hs.header.js"></script>
+  <script src="./assets/js/hs.hamburgers.js"></script>
+  <script src="./assets/js/hs.tabs.js"></script>
+  <script src="./assets/js/hs.go-to.js"></script>  
+  <script src="./assets/js/components/hs.popup.js"></script>
+  <script src="./assets/js/components/hs.progress-bar.js"></script>
+  <script src="./assets/js/components/hs.scrollbar.js"></script>
 
   <!-- Custom JS -->
-  <script src="assets/js/custom.js"></script>
+  <script src="./assets/js/custom.js"></script>
+
+
+
+
+
+   <script src="./assets/vendor/jquery/jquery.min.js"></script>
+  <script src="./assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="./assets/vendor/popper.js/popper.min.js"></script>
+  <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+
+  <!-- JS Implementing Plugins -->
+  <script src="assets/vendor/appear.js"></script>
+  <script src="assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+  <script src="assets/vendor/malihu-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- JS Unify -->
+  
+  
+
 
   <script type="text/javascript">
   
@@ -121,6 +144,12 @@
        // initialization of go to
        $.HSCore.components.HSGoTo.init('.js-go-to');
      });
+
+   $.HSCore.components.HSDropdown.init($('[data-dropdown-target]'), {
+        afterOpen: function () {
+          $(this).find('input[type="search"]').focus();
+        }
+      });
 
      $(window).on('load', function () {
        // initialization of header
