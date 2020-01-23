@@ -10,6 +10,8 @@ import store from  './store'
 import Vuelidate from 'vuelidate'
 Vue.use(Vuelidate)
 
+
+
 Vue.use(VueNoty, {
   timeout: 4000,
   progressBar: true,
