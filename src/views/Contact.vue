@@ -25,7 +25,7 @@
                 <i style="font-size:72px" class="icon-real-estate-027 u-line-icon-pro"></i>
               </span>
             <h4 class="h3 g-font-weight-600 g-mb-5">Address</h4>
-            <span class="d-block">61 Oxford str., London, 3DG</span>
+            <span class="d-block">44, Emily Akinola Street, Akoka Yaba</span>
           </div>
           <!-- End Icon Blocks -->
         </div>
@@ -49,7 +49,7 @@
                 <i style="font-size:72px"  class="icon-electronics-005 u-line-icon-pro"></i>
               </span>
             <h4 class="h3 g-font-weight-600 g-mb-5">Email</h4>
-            <span class="d-block">mail@htmlstream.com</span>
+            <span class="d-block">support@valuedseed.org</span>
           </div>
           <!-- End Icon Blocks -->
         </div>
@@ -60,40 +60,40 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h3 class="g-color-black g-font-weight-600 text-center mb-5">Who are you, and how can we help?</h3>
-            <form>
+            <form @submit="sendRequest">
               <div class="row">
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Name</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15"
+                  <input v-model="name" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15"
                     style="height:55px" type="text" placeholder="John Doe">
                 </div>
 
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Email</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
+                  <input v-model="email" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
                     style="height:55px" type="email" placeholder="johndoe@gmail.com">
                 </div>
 
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Subject</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
-                    style="height:55px" type="text" placeholder="Feedback">
+                  <input v-model="subject" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
+                    style="height:55px" type="text" placeholder="Subject">
                 </div>
 
                 <div class="col-md-6 form-group g-mb-20">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Phone</label>
-                  <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
-                    style="height:55px" type="tel" placeholder="+ (01) 222 33 44">
+                  <input v-model="phone" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded-3 g-py-13 g-px-15" 
+                    style="height:55px" type="text" placeholder="0803 000 5674">
                 </div>
 
                 <div class="col-md-12 form-group g-mb-40">
                   <label class="g-color-gray-dark-v2 g-font-size-13">Message</label>
-                  <textarea class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover g-resize-none rounded-3 g-py-13 g-px-15" rows="7" placeholder="Hi there, I would like to ..."></textarea>
+                  <textarea v-model="message" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover g-resize-none rounded-3 g-py-13 g-px-15" rows="7" placeholder="Hi there, I would like to ..."></textarea>
                 </div>
               </div>
 
               <div class="text-center">
-                <button class="btn u-btn-primary g-font-weight-600 g-font-size-13 text-uppercase g-rounded-25 g-py-15 g-px-30" type="submit" role="button">Send Request</button>
+                <button class="btn u-btn-primary g-font-weight-600 g-font-size-13 text-uppercase g-rounded-25 g-py-15 g-px-30" type="submit" role="button" @click="sendRequest">Send Request</button>
               </div>
             </form>
           </div>
@@ -109,6 +109,63 @@
 <script>
 export default {
   name: "Contact",
+   data(){
+    return {
+      name:null,
+      phone:null,
+      email:null,
+      subject:null,
+      message:null,
+      errors: [],
+      success: []
+    }
+  }, 
+  methods: {
+    sendRequest: function (e) {
+       e.preventDefault();
+
+      this.errors = [];
+      this.success = [];
+
+     
+
+      if (!this.name) {
+        this.errors.push('Contact name is required');
+      }
+      if (!this.email) {
+        this.errors.push('Contact email is required');
+      }
+      if (!this.subject) {
+        this.errors.push('subject is required');
+      }
+      if (!this.phone) {
+        this.errors.push('Contact phone is required');
+      }
+      if (!this.message) {
+        this.errors.push('Message body is required');
+      }
+
+       for (const error in this.errors){
+        return this.$noty.warning(this.errors[error]);
+      }
+       const formData = new FormData(); 
+        formData.append('name', this.name);
+        formData.append('subject', this.subject);
+        formData.append('email', this.email);
+        formData.append('phone', this.phone);
+        formData.append('message', this.message);
+        this.$http.post('api/contact',formData)
+        .then(response => {
+            console.log(response)
+            this.$noty.success(response.data.data.message);
+          })
+        .catch(error => {
+          const reply = Object.keys(error.response.data.errors);
+          const message = error.response.data.errors[reply];
+             this.$noty.error(message);
+          });
+    }
+  },
   components: {
     
   }

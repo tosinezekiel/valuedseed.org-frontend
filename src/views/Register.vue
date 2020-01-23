@@ -202,6 +202,7 @@ export default {
       for (const error in this.errors){
         return this.$noty.warning(this.errors[error]);
       }
+      
       e.preventDefault();
       const formData = new FormData();
       formData.append('first_name', this.first_name);
