@@ -19,7 +19,7 @@
           </div>
 
           <div class="col-lg-7 g-mb-30">
-            <img class="img-fluid w-100 mb-4" src="assets/img-temp/600x360/img1.png" alt="Image Description">
+            <img class="img-fluid w-100 mb-4" src="assets/img/s123.png" width="600px" height="50px" alt="Image Description">
           </div>
         </div>
       </div>

@@ -64,7 +64,7 @@
                      </div>
                   </div>
 
-                  <hr class="mt-25 mb-50 pb-15" />
+                  <hr class="mt-25 mb-50" />
 
                   <div class="row">
                      <div class="col-md-4 col-sm-4 col-md-border">

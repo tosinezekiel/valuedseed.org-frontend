@@ -10,6 +10,7 @@ import Contact from '@/views/Contact'
 import FAQ from '@/views/FAQ'
 import REGISTER from '@/views/Register'
 import ABOUT from '@/views/About'
+import BeTeacher from '@/views/BeTeacher'
 
 
 
@@ -80,6 +81,14 @@ export default new VueRouter({
             component: ABOUT,
             meta:{
                 title: 'About'
+            }
+        },
+        {
+            path: '/become-a-teacher',
+            name: 'BeTeacher',
+            component: BeTeacher,
+            meta:{
+                title: 'Become a teacher'
             }
         }
     ],

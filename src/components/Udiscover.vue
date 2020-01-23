@@ -3,7 +3,7 @@
       
         <div class="row">
             <div class="col-lg-7 g-mb-30">
-                <img class="img-fluid w-100 mb-4" src="assets/img-temp/600x360/img1.png" alt="Image Description">
+                <img class="img-fluid w-100 mb-4" src="assets/img/u-d.jpg" width="600px" height="360px" alt="Image Description">
            </div>
           <div class="col-lg-5 g-mb-30 pl-80">
             <div class="mb-2">

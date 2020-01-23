@@ -1,11 +1,11 @@
 <template>
     <div>
-        <section class="cta cta-shadow-3x cta-dark">
+        <section class="cta cta-shadow-3x cta-dark pb-20 pt-20">
                <div class="container">
                   <div class="cta-inner p-0">
                      <div class="cta-content">
 
-                        <img src="assets/img/custom/sales.png" alt="sales and specials" ms.title="sales and specials">
+                        <!-- <img src="assets/img/custom/sales.png" alt="sales and specials" ms.title="sales and specials"> -->
 
                         <h3 class="d-inline-block fs-20 fw-3">Aquire Lucrative Contents Of Learning...</h3>
                      </div>
