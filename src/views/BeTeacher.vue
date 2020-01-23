@@ -46,7 +46,18 @@
                   />
                   <small :class="{'small-error':LastNameErrors[0]}">{{LastNameErrors[0]}}</small>
                 </div>
-
+                <div class="mb-4">
+                  <label for="country">Gender</label><span style="color: red !important; display: inline; float: none;">*</span>  
+                  <select v-model="gender" class="form-control" 
+                  :class="{'cus-error':GenderErrors[0]}"
+                  @input="$v.gender.$touch()"
+                  @blur="$v.gender.$touch()"
+                  >
+                    <option disabled selected>--Select Gender--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                </div>
                 <div class="mb-4">
                   <label for="country">Email</label><span style="color: red !important; display: inline; float: none;">*</span>  
                   <input v-model="email" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-15 g-px-15" type="email" 
@@ -80,7 +91,7 @@
                 <div class="g-mb-30">
                   <label for="country">State</label><span style="color: red !important; display: inline; float: none;">*</span>  
                   <!-- <input v-model="state" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-15 g-px-15" type="text"> -->
-                  <select v-model="state" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-15 g-px-15" 
+                  <select v-model="state" class="form-control" 
                   :class="{'cus-error':StateErrors[0]}"
                   @input="$v.state.$touch()"
                   @blur="$v.state.$touch()"
@@ -131,12 +142,12 @@
                   <!-- <input v-model="country" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-15 g-px-15" type="text" placeholder="Country"> -->
                   <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>      
         
-                <select id="country" name="country" v-model="country" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--hover rounded g-py-15 g-px-15" 
+                <select id="country" name="country" v-model="country" class="form-control" 
                 :class="{'cus-error':CountryErrors[0]}"
                 @input="$v.country.$touch()"
                 @blur="$v.country.$touch()"
                 >
-                <option disabled selected>--Select State--</option>
+                <option disabled selected>--Select Country--</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -472,6 +483,7 @@ export default {
       last_name: null,
       email: null,
       phone: null,
+      gender: null,
       subject: null,
       state: null,
       country: null,
@@ -500,6 +512,12 @@ export default {
       if (!this.$v.email.$dirty) return errors
       !this.$v.email.email && errors.push('Must be valid e-mail')
       !this.$v.email.required && errors.push('email is required.')
+      return errors
+    },
+    GenderErrors () {
+      const errors = []
+      if (!this.$v.gender.$dirty) return errors
+      !this.$v.gender.required && errors.push('gender is required.')
       return errors
     },
     PhoneErrors () {
@@ -540,6 +558,7 @@ export default {
       first_name: { required, maxLength: maxLength(10), minLength: minLength(5) },
       last_name: { required, maxLength: maxLength(10), minLength: minLength(5) },
       email: { required, email },
+      gender: { required },
       phone: { required, maxLength: maxLength(11) },
       subject: { required, minLength: minLength(3) },
       state: { required },
@@ -548,33 +567,57 @@ export default {
   },
   methods:{
     checkForm: function (e) {
+      let currentObj = this
        e.preventDefault();
        const formData = new FormData();
         formData.append('first_name', this.first_name);
         formData.append('last_name', this.last_name);
         formData.append('email', this.email);
         formData.append('phone', this.phone);
+        formData.append('subject', this.subject);
         formData.append('state', this.state);
         formData.append('country', this.country);
         formData.append('about', this.about);
-      // if (this.first_name && 
-      //     this.last_name && 
-      //     this.email &&
-      //     this.phone &&
-      //     this.subject &&
-      //     this.state && 
-      //     this.country && 
-      //     this.about){
-        alert('hello');
-        this.$http.post('http://valuedseed.org/api/application',formData)
+        formData.append('gender', this.gender);
+        // formData.append('first_name', 'tosin');
+        // formData.append('last_name', 'mikel');
+        // formData.append('email', 'tosin@gmail.com');
+        // formData.append('phone', '09089786756');
+        // formData.append('subject', 'porotech');
+        // formData.append('state', 'ekiti');
+        // formData.append('country', 'nigeria');
+        // formData.append('about','i love tech');
+        // formData.append('gender', 'male');
+      if (this.first_name && 
+          this.last_name && 
+          this.email &&
+          this.phone &&
+          this.subject &&
+          this.gender &&
+          this.state && 
+          this.country && 
+          this.about){
+        this.$http.post('api/application',formData)
         .then(response => {
-            console.log(response)
-          }).error(error => {
-            console.log(error)
-          });
-        // }
-
-      // this.errors = [];
+            this.$noty.success(response.data.message);
+            this.first_name = null;
+            this.last_name = null;
+            this.email = null;
+            this.phone = null;
+            this.gender = null;
+            this.subject = null;
+            this.state = null;
+            this.country = null;
+            this.about = null;
+          }).catch( function(error){
+              const objkey = Object.keys(error.response.data.errors);
+              const fisrtError = error.response.data.errors[objkey[0]][0];
+              console.log(fisrtError);
+              currentObj.$noty.error(fisrtError);
+            });
+        }else{
+          this.$noty.warning("one or more field is empty");
+        }
     }
   },
   components: {
