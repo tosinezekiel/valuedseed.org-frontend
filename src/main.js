@@ -20,6 +20,8 @@ Vue.use(VueAxios, axios)
 Vue.use(Vuex)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
+
+
 import 'vuejs-noty/dist/vuejs-noty.css'
 new Vue({
   router,
