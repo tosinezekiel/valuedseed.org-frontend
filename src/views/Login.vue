@@ -125,9 +125,11 @@ export default {
   },
   methods:{
     checkForm(e){
-      let currentObj = this;
+       let currentObj = this;
       e.preventDefault();
       const formData = new FormData();
+      // formData.append('email', 'tosin@gmail.com');
+      // formData.append('password', '12345678');
       formData.append('email', this.email);
       formData.append('password', this.password);
       if (this.email && 
@@ -135,17 +137,21 @@ export default {
         this.$http
         .post('api/login', formData)
         .then(response => {
-          // let route = this.$router.resolve({path: '/localhost:8081'});
+            currentObj.$cookies.keys().forEach(cookie => currentObj.$cookies.remove(cookie))
             console.log(response.data.data);
-            localStorage.id = response.data.data.id;
-            localStorage.token = response.data.data.token;
-            window.open('localhost:8081', '_blank');
+            const user_data = response.data.data;
+            currentObj.$cookies.set('id',user_data.id)
+              .set('token',user_data.token)
+              .set('role',user_data.role);
+            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8081' : window.location.href = 'http://localhost:8083';
           })
-        .catch(error => {
-          //console.log(error.response.data.error.message);
-          currentObj.$noty.error(error.response.data.error.message);
+        .catch(function(error) {
+          console.log(error);
+          // console.log(error.response.data.error.message);
+          // currentObj.$noty.error(error.response.data.error.message);
         });
-      }else{
+      }
+      else{
           this.$noty.warning("username and password field are both required!");
       }
     }
