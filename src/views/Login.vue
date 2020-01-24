@@ -34,7 +34,7 @@
             </header>
 
             <!-- Form -->
-            <form class="g-py-15">
+            <form class="g-py-15" @submit="checkForm">
               <div class="mb-4">
                 <div class="input-group g-brd-primary--focus">
                   <div class="input-group-prepend">
@@ -45,12 +45,16 @@
                     </span>
                   </div>
                   <input
-                    v-model="useremail" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
+                    v-model="email" class="form-control g-color-black g-bg-white g-brd-gray-light-v4 g-py-15 g-px-15"
                     type="email"
                     placeholder="johndoe@gmail.com"
                     style="height:55px"
+                    :class="{'cus-error':EmailErrors[0]}"
+                    @input="$v.email.$touch()"
+                    @blur="$v.email.$touch()"
                   />
                 </div>
+                 <small :class="{'small-error':EmailErrors[0]}">{{EmailErrors[0]}}</small>
               </div>
 
               <div class="g-mb-35">
@@ -67,7 +71,11 @@
                     type="password"
                     placeholder="Password"
                     style="height:55px"
+                    :class="{'cus-error':PasswordErrors[0]}"
+                    @input="$v.password.$touch()"
+                    @blur="$v.password.$touch()"
                   />
+                  <small :class="{'small-error':PasswordErrors[0]}">{{PasswordErrors[0]}}</small>
                 </div>
 
                 <div class="row justify-content-between">
@@ -86,7 +94,7 @@
               </div>
 
               <div class="mb-4">
-                <button class="btn btn-md btn-block u-btn-primary g-py-13" v-on:click="submit" type="button">Login</button>
+                <button class="btn btn-md btn-block u-btn-primary g-py-13" @click="checkForm" type="button">Login</button>
               </div>
             </form>
             <!-- End Form -->
@@ -105,53 +113,60 @@
 </template>
 
 <script>
+import { required, email, maxLength, minLength } from 'vuelidate/lib/validators'
 export default {
   name: "Login",
   data(){
     return{
       errors: [],
-      success: [],
-      failure: [],
-      useremail: null,
+      email: null,
       password: null
     }
   },
   methods:{
-    submit(event){
-      this.errors = [];
-      this.success = [];
-      this.failure = [];
-
-      if (!this.useremail) {
-        this.errors.push('Provide your email address.');
-      }
-      if (!this.password) {
-        this.errors.push('Provide your account password.');
-      }
-      for (const error in this.errors){
-        return this.$noty.warning(this.errors[error]);
-      }
-
-      for (const fail in this.failure){
-        return this.$noty.error(this.failure[fail]);
-      }
-
-      event.preventDefault();
+    checkForm(e){
+      let currentObj = this;
+      e.preventDefault();
       const formData = new FormData();
-      formData.append('email', this.useremail);
+      formData.append('email', this.email);
       formData.append('password', this.password);
-      this.$http
+      if (this.email && 
+          this.password){
+        this.$http
         .post('api/login', formData)
         .then(response => {
-            //console.log(response);
-            this.useremail = null;
-            this.password = null;
-            this.success = response;
+          // let route = this.$router.resolve({path: '/localhost:8081'});
+            console.log(response.data.data);
+            localStorage.id = response.data.data.id;
+            localStorage.token = response.data.data.token;
+            window.open('localhost:8081', '_blank');
           })
-        .catch(data => {
-          this.errors.push(data);
-          console.log(data);
+        .catch(error => {
+          //console.log(error.response.data.error.message);
+          currentObj.$noty.error(error.response.data.error.message);
         });
+      }else{
+          this.$noty.warning("username and password field are both required!");
+      }
+    }
+  },
+  validations:{
+      email: { required, email },
+      password: { required, maxLength: maxLength(6), minLength: minLength(6) }
+  },
+  computed:{
+    EmailErrors () {
+      const errors = []
+      if (!this.$v.email.$dirty) return errors
+      !this.$v.email.email && errors.push('Must be valid e-mail')
+      !this.$v.email.required && errors.push('email is required.')
+      return errors
+    },
+    PasswordErrors () {
+      const errors = []
+      if (!this.$v.password.$dirty) return errors
+      !this.$v.password.required && errors.push('password is required.')
+      return errors
     }
   },
   components: {
@@ -160,6 +175,14 @@ export default {
 </script> 
 <style scoped>
 /* Button Primary */
+.cus-error{
+  border-color:red !important;
+}
+.small-error{
+  color:red !important;
+  margin-top:5px;
+  margin-bottom:5px;
+}
 .u-btn-primary {
   color: #fff;
   background-color: #72c02c;

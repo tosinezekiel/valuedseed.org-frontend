@@ -1,7 +1,7 @@
 <template>
     <div>
     <section class="dzsparallaxer auto-init height-is-based-on-content mode-scroll loaded">
-      <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_3--after" style="height: 140%; background-image: url(assets/img-temp/1920x800/img3.jpg);">
+      <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_3--after" style="height: 140%; background-image: url(assets/img/abt.png);">
       </div>
       <div class="container g-color-white text-center g-py-120">
         <h3 class="h1 g-font-weight-600 text-uppercase mb-2">About us</h3>
