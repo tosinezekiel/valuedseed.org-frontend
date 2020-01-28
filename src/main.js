@@ -10,7 +10,7 @@ import store from  './store'
 import Vuelidate from 'vuelidate'
 import VueCookies from 'vue-cookies'
 Vue.use(VueCookies)
-Vue.$cookies.config('7d')
+Vue.$cookies.config('1d')
 // Vue.$cookies.set('theme','default');
 // Vue.$cookies.set('hover-time','1s');
 

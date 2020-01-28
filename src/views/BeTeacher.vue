@@ -569,16 +569,16 @@ export default {
     checkForm: function (e) {
       let currentObj = this
        e.preventDefault();
-       const formData = new FormData();
-        formData.append('first_name', this.first_name);
-        formData.append('last_name', this.last_name);
-        formData.append('email', this.email);
-        formData.append('phone', this.phone);
-        formData.append('subject', this.subject);
-        formData.append('state', this.state);
-        formData.append('country', this.country);
-        formData.append('about', this.about);
-        formData.append('gender', this.gender);
+       // const formData = new FormData();
+       //  formData.append('first_name', this.first_name);
+       //  formData.append('last_name', this.last_name);
+       //  formData.append('email', this.email);
+       //  formData.append('phone', this.phone);
+       //  formData.append('subject', this.subject);
+       //  formData.append('state', this.state);
+       //  formData.append('country', this.country);
+       //  formData.append('about', this.about);
+       //  formData.append('gender', this.gender);
         // formData.append('first_name', 'tosin');
         // formData.append('last_name', 'mikel');
         // formData.append('email', 'tosin@gmail.com');
@@ -597,18 +597,20 @@ export default {
           this.state && 
           this.country && 
           this.about){
-        this.$http.post('api/application',formData)
+        this.$http.post('http://valuedseed.org/api/application',{
+          'first_name' : this.first_name, 
+          'last_name' : this.last_name, 
+          'gender' : this.gender, 
+          'email' : this.email, 
+          'state' : this.state, 
+          'about' : this.about, 
+          'country' : this.country, 
+          'subject' : this.subject, 
+          'phone' : this.phone
+        })
         .then(response => {
-            this.$noty.success(response.data.message);
-            this.first_name = null;
-            this.last_name = null;
-            this.email = null;
-            this.phone = null;
-            this.gender = null;
-            this.subject = null;
-            this.state = null;
-            this.country = null;
-            this.about = null;
+          // console.log(response.data);
+            this.$noty.success(response.data.data.message);
           }).catch( function(error){
               const objkey = Object.keys(error.response.data.errors);
               const fisrtError = error.response.data.errors[objkey[0]][0];
