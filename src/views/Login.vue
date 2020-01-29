@@ -127,28 +127,40 @@ export default {
     checkForm(e){
        let currentObj = this;
       e.preventDefault();
-      const formData = new FormData();
-      // formData.append('email', 'tosin@gmail.com');
-      // formData.append('password', '12345678');
-      formData.append('email', this.email);
-      formData.append('password', this.password);
       if (this.email && 
           this.password){
         this.$http
-        .post('api/login', formData)
+        .post('api/login', {
+          email: this.email,
+          password : this.password
+        })
         .then(response => {
             currentObj.$cookies.keys().forEach(cookie => currentObj.$cookies.remove(cookie))
             console.log(response.data.data);
             const user_data = response.data.data;
-            currentObj.$cookies.set('id',user_data.id)
-              .set('token',user_data.token)
-              .set('role',user_data.role);
-            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8081' : window.location.href = 'http://localhost:8083';
+            currentObj.$cookies.set('vs_id',user_data.id)
+              .set('vs_token',user_data.token)
+              .set('vs_role',user_data.role)
+              .set('vs_first_name',user_data.first_name)
+              .set('vs_last_name',user_data.last_name)
+              .set('vs_gender',user_data.gender)
+              .set('vs_email',user_data.email);
+              const name = user_data.first_name.toUpperCase()+ ' '+user_data.last_name;
+              let data = [];
+              data = {
+                'id': user_data.id,
+                'name': name,
+                'token': user_data.token,
+                'role': user_data.role,
+                'email': user_data.email,
+                'status': true
+              };
+              this.$store.commit('init',data);
+            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8080';
+ 
           })
         .catch(function(error) {
           console.log(error);
-          // console.log(error.response.data.error.message);
-          // currentObj.$noty.error(error.response.data.error.message);
         });
       }
       else{

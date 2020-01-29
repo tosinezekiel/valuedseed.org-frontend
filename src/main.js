@@ -9,12 +9,18 @@ import router from  './router'
 import store from  './store'
 import Vuelidate from 'vuelidate'
 import VueCookies from 'vue-cookies'
+import {token, id, role} from './cookies'
+
 Vue.use(VueCookies)
-Vue.$cookies.config('7d')
-// Vue.$cookies.set('theme','default');
-// Vue.$cookies.set('hover-time','1s');
+Vue.$cookies.config('1d')
 
-
+Vue.$cookies.remove('vs_id');
+Vue.$cookies.remove('vs_token');
+Vue.$cookies.remove('vs_name');
+Vue.$cookies.remove('vs_role');
+// Vue.use(id)
+// Vue.use(token)
+// Vue.use(role)
 Vue.use(Vuelidate)
 
 
@@ -25,6 +31,9 @@ Vue.use(VueNoty, {
   layout: 'topRight'
 })
 Vue.prototype.$http = axios
+Vue.prototype.$token = token
+Vue.prototype.$id = id
+Vue.prototype.$role = role
 Vue.use(VueAxios, axios)
 Vue.use(Vuex)
 Vue.use(VueRouter)

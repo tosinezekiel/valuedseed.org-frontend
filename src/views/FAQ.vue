@@ -97,24 +97,13 @@ export default {
       let jil = this;
       this.$http.get('api/faq')
       .then(response => {
-        // console.log(response.data.data[0].faqs);
         const log = response.data.data;
-
+        // console.log(log);
         log.forEach(function (item){
           jil.category.push(item['name']);
           jil.faqs.push(item);
-          // console.log(jil.faqs);
-          // console.log(item['name']);
 
         });
-
-            // log.forEach(function(item, index){
-            //   // this.faq_category.push(index,item);
-            //   console.log("count"+ item[index]);
-            // });
-            
-            // console.log(log);
-            // console.
           })
 
     }
