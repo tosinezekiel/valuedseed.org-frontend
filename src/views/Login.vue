@@ -138,11 +138,14 @@ export default {
             currentObj.$cookies.keys().forEach(cookie => currentObj.$cookies.remove(cookie))
             console.log(response.data.data);
             const user_data = response.data.data;
+
             currentObj.$cookies.set('vs_id',user_data.id)
+
               .set('vs_token',user_data.token)
               .set('vs_role',user_data.role)
               .set('vs_first_name',user_data.first_name)
               .set('vs_last_name',user_data.last_name)
+
               .set('vs_gender',user_data.gender)
               .set('vs_email',user_data.email);
               const name = user_data.first_name.toUpperCase()+ ' '+user_data.last_name;
@@ -157,7 +160,7 @@ export default {
               };
               this.$store.commit('init',data);
             currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8080';
- 
+
           })
         .catch(function(error) {
           console.log(error);
