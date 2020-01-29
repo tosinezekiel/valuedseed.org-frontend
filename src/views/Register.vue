@@ -221,7 +221,8 @@ export default {
               this.email = null;
               this.password = null;
               this.password_confirmation = null;
-              this.errors  =  []
+              this.errors  =  [];
+              this.$noty.success('Congratulations! Account created');
           });
         },
       },
