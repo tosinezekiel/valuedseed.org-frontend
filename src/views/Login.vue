@@ -142,12 +142,6 @@ export default {
             currentObj.$cookies.keys().forEach(cookie => currentObj.$cookies.remove(cookie))
             console.log(response.data.data);
             const user_data = response.data.data;
-<<<<<<< HEAD
-            currentObj.$cookies.set('id',user_data.id)
-              .set('token',user_data.token)
-              .set('role',user_data.role);
-            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8081';
-=======
 
             currentObj.$cookies.set('vs_id',user_data.id)
 
@@ -171,7 +165,6 @@ export default {
               this.$store.commit('init',data);
             currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8080';
 
->>>>>>> 903420f9889b1db741effe16b659a35fdc75a0aa
           })
         .catch(function(error) {
           console.log(error);
