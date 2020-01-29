@@ -135,7 +135,10 @@ export default {
       if (this.email && 
           this.password){
         this.$http
-        .post('api/login', formData)
+        .post('api/login', {
+          email : this.email,
+          password : this.password
+        })
         .then(response => {
             currentObj.$cookies.keys().forEach(cookie => currentObj.$cookies.remove(cookie))
             console.log(response.data.data);
@@ -143,7 +146,7 @@ export default {
             currentObj.$cookies.set('id',user_data.id)
               .set('token',user_data.token)
               .set('role',user_data.role);
-            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8081' : window.location.href = 'http://localhost:8083';
+            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8081';
           })
         .catch(function(error) {
           console.log(error);
