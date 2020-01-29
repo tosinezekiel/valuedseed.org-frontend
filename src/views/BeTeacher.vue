@@ -2,8 +2,8 @@
     <div>
     <!-- Breadcrumbs -->
     <section class="dzsparallaxer auto-init height-is-based-on-content mode-scroll loaded">
-      <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_3--after" style="height: 140%; background-image: url(assets/img-temp/1920x800/img3.jpg);">
-      </div>
+     <!--  <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-black-opacity-0_3--after" style="height: 140%; background-image: url(assets/img-temp/1920x800/img3.jpg);">
+      </div> -->
       <div class="container g-color-white text-center g-py-120">
         <h3 class="h1 g-font-weight-600 text-uppercase mb-2">Can You Teach?</h3>
         <p class="g-font-weight-300 g-font-size-22 text-uppercase">Unify is a clean and fully responsive theme</p>
@@ -569,16 +569,16 @@ export default {
     checkForm: function (e) {
       let currentObj = this
        e.preventDefault();
-       const formData = new FormData();
-        formData.append('first_name', this.first_name);
-        formData.append('last_name', this.last_name);
-        formData.append('email', this.email);
-        formData.append('phone', this.phone);
-        formData.append('subject', this.subject);
-        formData.append('state', this.state);
-        formData.append('country', this.country);
-        formData.append('about', this.about);
-        formData.append('gender', this.gender);
+       // const formData = new FormData();
+       //  formData.append('first_name', this.first_name);
+       //  formData.append('last_name', this.last_name);
+       //  formData.append('email', this.email);
+       //  formData.append('phone', this.phone);
+       //  formData.append('subject', this.subject);
+       //  formData.append('state', this.state);
+       //  formData.append('country', this.country);
+       //  formData.append('about', this.about);
+       //  formData.append('gender', this.gender);
         // formData.append('first_name', 'tosin');
         // formData.append('last_name', 'mikel');
         // formData.append('email', 'tosin@gmail.com');
@@ -597,18 +597,20 @@ export default {
           this.state && 
           this.country && 
           this.about){
-        this.$http.post('api/application',formData)
+        this.$http.post('http://valuedseed.org/api/application',{
+          'first_name' : this.first_name, 
+          'last_name' : this.last_name, 
+          'gender' : this.gender, 
+          'email' : this.email, 
+          'state' : this.state, 
+          'about' : this.about, 
+          'country' : this.country, 
+          'subject' : this.subject, 
+          'phone' : this.phone
+        })
         .then(response => {
-            this.$noty.success(response.data.message);
-            this.first_name = null;
-            this.last_name = null;
-            this.email = null;
-            this.phone = null;
-            this.gender = null;
-            this.subject = null;
-            this.state = null;
-            this.country = null;
-            this.about = null;
+          // console.log(response.data);
+            this.$noty.success(response.data.data.message);
           }).catch( function(error){
               const objkey = Object.keys(error.response.data.errors);
               const fisrtError = error.response.data.errors[objkey[0]][0];

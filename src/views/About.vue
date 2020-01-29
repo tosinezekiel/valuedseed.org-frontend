@@ -5,12 +5,12 @@
       </div>
       <div class="container g-color-white text-center g-py-120">
         <h3 class="h1 g-font-weight-600 text-uppercase mb-2">About us</h3>
-        <p class="g-font-weight-300 g-font-size-22 text-uppercase">Unify is a clean and fully responsive theme</p>
+        <p class="g-font-weight-300 g-font-size-22 text-uppercase">A brief about ValuedSeed would come in here</p>
       </div>
     </section>
     <section class="container u-ns-bg-v1-bottom g-bg-white g-py-100">
       <div class="text-center">
-        <h2 class="h5 g-line-height-1_8">Unify is a
+        <h2 class="h5 g-line-height-1_8">ValuedSeed 
             <span class="g-brd-bottom g-brd-primary g-color-primary g-font-weight-600 pb-1">creative</span> technology company providing key digital services.<br>Focused on helping our clients to build a
             <span class="g-brd-bottom g-brd-primary g-color-primary g-font-weight-600 pb-1">successful</span> business on web and mobile.
           </h2>

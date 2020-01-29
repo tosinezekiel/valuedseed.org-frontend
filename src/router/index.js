@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home'
 import Shop from '@/views/Shop'
 import Login from '@/views/Login'
+import Logout from '@/views/Logout'
 import PasswordReset from '@/views/PasswordReset'
 import Contact from '@/views/Contact'
 import FAQ from '@/views/FAQ'
@@ -89,6 +90,14 @@ export default new VueRouter({
             component: BeTeacher,
             meta:{
                 title: 'Become a teacher'
+            }
+        },
+        {
+            path: '/logout',
+            name: 'logout',
+            component: Logout,
+            meta:{
+                title: 'Logout'
             }
         }
     ],
