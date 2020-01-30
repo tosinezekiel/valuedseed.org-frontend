@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import Vue from  'vue'
 import Vuex from 'vuex'
 // import VueCookies from 'vue-cookies'
@@ -51,4 +48,3 @@ export default new Vuex.Store({
 		// }
 	}
 }) 
->>>>>>> 903420f9889b1db741effe16b659a35fdc75a0aa

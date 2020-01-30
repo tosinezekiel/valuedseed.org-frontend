@@ -1,7 +1,11 @@
  // vue.config.js
 module.exports = {
-  // options...
   devServer: {
         proxy: 'http://valuedseed.org/',
     }
+}
+module.exports = {
+  chainWebpack: config => {
+      config.module.rules.delete('eslint');
+  }
 }

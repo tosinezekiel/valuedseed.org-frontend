@@ -18,11 +18,7 @@ Vue.$cookies.config('1d')
 
 Vue.$cookies.remove('vs_id');
 Vue.$cookies.remove('vs_token');
-Vue.$cookies.remove('vs_name');
 Vue.$cookies.remove('vs_role');
-// Vue.use(id)
-// Vue.use(token)
-// Vue.use(role)
 Vue.use(Vuelidate)
 
 
@@ -32,18 +28,7 @@ Vue.use(VueNoty, {
   progressBar: true,
   layout: 'topRight'
 })
-<<<<<<< HEAD
-// import {token, id, role} from './cookies'
-// Vue.prototype.$token = token
-// Vue.prototype.$id = id
-// Vue.prototype.$role = role
-// Vue.prototype.$http = axios
-=======
-Vue.prototype.$http = axios
-Vue.prototype.$token = token
-Vue.prototype.$id = id
-Vue.prototype.$role = role
->>>>>>> 903420f9889b1db741effe16b659a35fdc75a0aa
+
 Vue.use(VueAxios, axios)
 Vue.use(Vuex)
 Vue.use(VueRouter)
