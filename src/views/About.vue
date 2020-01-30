@@ -243,9 +243,9 @@
           <div class="col-lg-7">
             <!-- Heading -->
             <div class="text-center">
-              <h2 class="h3 g-color-black text-uppercase mb-2">What people say about Unify?</h2>
+              <h2 class="h3 g-color-black text-uppercase mb-2">What people say about ValuedSeed?</h2>
               <div class="d-inline-block g-width-35 g-height-2 g-bg-primary mb-2"></div>
-              <p class="mb-0">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
+              <p class="mb-0">We are a creative enterprise somewhere between sophistication and simplicity.</p>
             </div>
             <!-- End Heading -->
           </div>
@@ -254,7 +254,7 @@
         <div class="row">
           <div class="col-md-6 g-mb-50">
             <!-- Testimonials -->
-            <blockquote class="lead u-blockquote-v1 rounded g-pl-60 g-pr-30 g-py-30 g-mb-40">Dear Htmlstream team, I just bought the Unify template some weeks ago. The template is really nice and offers quite a large set of options.</blockquote>
+            <blockquote class="lead u-blockquote-v1 rounded g-pl-60 g-pr-30 g-py-30 g-mb-40">Dear team, I just bought the ValuedSeed WAEC bundle pack. The bundle is really nice and offers quite a large experience.</blockquote>
             <div class="media">
               <img class="d-flex align-self-center rounded-circle g-width-60 g-brd-around g-brd-3 g-brd-white mr-3" src="assets/img-temp/100x100/img16.jpg" alt="Image Description">
               <div class="media-body align-self-center">
@@ -267,7 +267,7 @@
 
           <div class="col-md-6 g-mb-50">
             <!-- Testimonials -->
-            <blockquote class="lead u-blockquote-v1 rounded g-pl-60 g-pr-30 g-py-30 g-mb-40">Hi there purchased a couple of days ago and the site looks great, big thanks to the htmlstream guys, they gave me some great help with some fiddly setup issues.</blockquote>
+            <blockquote class="lead u-blockquote-v1 rounded g-pl-60 g-pr-30 g-py-30 g-mb-40">Hi there purchased a couple of days ago and the subscription looks great, big thanks to the team guys, they gave me some great help with some fiddly setup issues.</blockquote>
             <div class="media">
               <img class="d-flex align-self-center rounded-circle g-width-60 g-brd-around g-brd-3 g-brd-white mr-3" src="assets/img-temp/100x100/img14.jpg" alt="Image Description">
               <div class="media-body align-self-center">
