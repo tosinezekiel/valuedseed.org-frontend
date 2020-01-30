@@ -28,7 +28,7 @@ Vue.use(VueNoty, {
   progressBar: true,
   layout: 'topRight'
 })
-
+Vue.prototype.$http = axios
 Vue.use(VueAxios, axios)
 Vue.use(Vuex)
 Vue.use(VueRouter)
