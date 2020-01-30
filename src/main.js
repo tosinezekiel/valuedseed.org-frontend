@@ -30,9 +30,6 @@ Vue.use(VueNoty, {
   layout: 'topRight'
 })
 Vue.prototype.$http = axios
-Vue.prototype.$token = token
-Vue.prototype.$id = id
-Vue.prototype.$role = role
 Vue.use(VueAxios, axios)
 Vue.use(Vuex)
 Vue.use(VueRouter)
