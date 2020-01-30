@@ -18,7 +18,6 @@ Vue.$cookies.config('1d')
 
 Vue.$cookies.remove('vs_id');
 Vue.$cookies.remove('vs_token');
-Vue.$cookies.remove('vs_name');
 Vue.$cookies.remove('vs_role');
 Vue.use(Vuelidate)
 

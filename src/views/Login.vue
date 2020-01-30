@@ -145,9 +145,9 @@ export default {
               .set('vs_role',user_data.role)
               .set('vs_first_name',user_data.first_name)
               .set('vs_last_name',user_data.last_name)
-
               .set('vs_gender',user_data.gender)
               .set('vs_email',user_data.email);
+
               const name = user_data.first_name.toUpperCase()+ ' '+user_data.last_name;
               let data = [];
               data = {
@@ -158,8 +158,10 @@ export default {
                 'email': user_data.email,
                 'status': true
               };
+
               this.$store.commit('init',data);
-            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8080';
+
+            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8081';
 
           })
         .catch(function(error) {
