@@ -130,7 +130,7 @@ export default {
       if (this.email && 
           this.password){
         this.$http
-        .post('api/login', {
+        .post('http://valuedseed.org/api/login', {
           email: this.email,
           password : this.password
         })
