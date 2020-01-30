@@ -9,7 +9,9 @@ import router from  './router'
 import store from  './store'
 import Vuelidate from 'vuelidate'
 import VueCookies from 'vue-cookies'
-import {token, id, role} from './cookies'
+Vue.use(VueCookies)
+Vue.$cookies.config('1d')
+
 
 Vue.use(VueCookies)
 Vue.$cookies.config('1d')
