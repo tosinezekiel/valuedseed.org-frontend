@@ -212,7 +212,7 @@ export default {
       formData.append('password_confirmation', this.password_confirmation);
 
       this.$http
-        .post('api/register', formData)
+        .post('http://api.valuedseed.org/api/register', formData)
         .then(response => {
             console.log(response);
             this.success.push('Congratulations! '+this.first_name+' '+this.last_name);

@@ -19,7 +19,7 @@
 			    const auth = 'Bearer '+ this.$store.getters.isLogged;
 			    this.$http({ 
 			    	method: 'POST',
-			    	'url': 'http://valuedseed.org/api/logout',
+			    	'url': 'http://api.valuedseed.org/api/logout',
 			    	"headers":{
 			    		'Authorization': auth
 			    	}
