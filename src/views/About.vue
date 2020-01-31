@@ -105,7 +105,7 @@
 				    <h2 class="h3 g-color-black text-uppercase mb-2">Meet your creative team</h2>
 				    	<div class="d-inline-block g-width-35 g-height-2 g-bg-primary mb-2"></div>
 				    <p class="lead mb-0">
-					    We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.
+					    We are a team of educational experts focusing on simplicity, personalization, societal growth &amp; development. Somewhere between sophistication and simplicity.
 				    </p>
 			    </div>
 		    </div>

@@ -6,7 +6,7 @@
       </div> -->
       <div class="container g-color-white text-center g-py-120">
         <h3 class="h1 g-font-weight-600 text-uppercase mb-2">Can You Teach?</h3>
-        <p class="g-font-weight-300 g-font-size-22 text-uppercase">Unify is a clean and fully responsive theme</p>
+        <p class="g-font-weight-300 g-font-size-22 text-uppercase">are you a teacher? apply to become our next teacher</p>
       </div>
     </section>
     <!-- End Breadcrumbs -->
