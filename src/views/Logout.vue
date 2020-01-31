@@ -16,8 +16,19 @@
 			        'role': null,
 			        'status': 0
 			    };
-			    this.$store.commit('init',data);
-			    window.location="/login";
+			    const auth = 'Bearer '+ this.$store.getters.isLogged;
+			    this.$http({ 
+			    	method: 'POST',
+			    	'url': 'http://valuedseed.org/api/logout',
+			    	"headers":{
+			    		'Authorization': auth
+			    	}
+			    }).then(response => {          
+			    	this.$store.commit('init',data);
+			    	this.$store.commit('upload_image',null);
+			    	window.location="/login";
+			    	console.log(response);
+			    });
 			}
 		},
 		mounted(){
