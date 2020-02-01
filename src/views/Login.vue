@@ -124,6 +124,16 @@ export default {
     }
   },
   methods:{
+    clearCookies(){
+      this.$cookies.remove('vs_id');
+      this.$cookies.remove('vs_token');
+      this.$cookies.remove('vs_role');
+      this.$cookies.remove('vs_first_name');
+      this.$cookies.remove('vs_last_name');
+      this.$cookies.remove('vs_gender');
+      this.$cookies.remove('vs_email');
+      this.$cookies.remove('vs_authenticated');
+    },
     checkForm(e){
        let currentObj = this;
       e.preventDefault();
@@ -166,9 +176,9 @@ export default {
 
           })
         .catch(function(error) {
-          console.log(error.response);
+          console.log(error.response.data.error.message);
           const data = error.response.data.error.message;
-            this.$noty.error(data);
+            currentObj.$noty.error(data);
         });
       }
       else{
@@ -196,6 +206,9 @@ export default {
     }
   },
   components: {
+  },
+  mounted(){
+    this.clearCookies();
   }
 };
 </script> 
