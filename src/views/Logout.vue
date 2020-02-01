@@ -8,6 +8,7 @@
 	export default{
 		methods:{
 			init(){
+				let currentObj = this;
 				let data = [];
 			     data = {
 			        'id': null,
@@ -23,12 +24,14 @@
 			    	"headers":{
 			    		'Authorization': auth
 			    	}
-			    }).then(response => {          
+			    }).then(response => {      
+			    	console.log(response);
+			    });
+
 			    	this.$store.commit('init',data);
 			    	this.$store.commit('upload_image',null);
 			    	window.location="/login";
-			    	console.log(response);
-			    });
+			    currentObj.$cookies.remove('vs_authenticated');
 			}
 		},
 		mounted(){
