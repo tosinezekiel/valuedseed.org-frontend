@@ -95,7 +95,7 @@ export default {
   methods:{
     init(){
       let jil = this;
-      this.$http.get('api/faq')
+      this.$http.get('http://api.valuedseed.org/api/faq')
       .then(response => {
         const log = response.data.data;
         // console.log(log);

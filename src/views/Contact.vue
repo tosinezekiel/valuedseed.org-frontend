@@ -154,7 +154,7 @@ export default {
         formData.append('email', this.email);
         formData.append('phone', this.phone);
         formData.append('message', this.message);
-        this.$http.post('api/contact',formData)
+        this.$http.post('http://api.valuedseed.org/api/contact',formData)
         .then(response => {
             console.log(response)
             this.$noty.success(response.data.data.message);
