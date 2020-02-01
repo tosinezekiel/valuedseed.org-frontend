@@ -596,7 +596,7 @@ export default {
           this.state && 
           this.country && 
           this.about){
-        this.$http.post('http://valuedseed.org/api/application',{
+        this.$http.post('http://api.valuedseed.org/api/application',{
           'first_name' : this.first_name, 
           'last_name' : this.last_name, 
           'gender' : this.gender, 

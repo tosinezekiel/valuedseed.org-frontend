@@ -162,7 +162,7 @@ export default {
 
               this.$store.commit('init',data);
 
-            currentObj.$cookies.get('role') === 'customer' ? window.location.href = 'http://localhost:8082' : window.location.href = 'http://localhost:8080';
+            currentObj.$cookies.get('role') == 'customer' ? window.location.href = 'http://shop.valuedseed.org' : window.location.href = 'http://dashboard.valuedseed.org';
 
           })
         .catch(function(error) {
