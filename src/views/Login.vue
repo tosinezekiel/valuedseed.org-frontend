@@ -166,7 +166,9 @@ export default {
 
           })
         .catch(function(error) {
-          console.log(error);
+          console.log(error.response);
+          const data = error.response.data.error.message;
+            this.$noty.error(data);
         });
       }
       else{
