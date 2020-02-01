@@ -25,8 +25,8 @@
               <span class="d-block g-color-primary g-font-size-35 g-mb-5">
                 <i class="icon-education-087 u-line-icon-pro"></i>
               </span>
-              <h3 class="h5 g-color-black text-uppercase mb-3">Creative ideas</h3>
-              <p class="g-color-gray-dark-v4">We strive to embrace and drive change in our industry which allows us to keep our clients relevant and ready to adapt.</p>
+              <h3 class="h5 g-color-black text-uppercase mb-3">Conducive Environment</h3>
+              <p class="g-color-gray-dark-v4">We strive to embrace and drive change in the education sector which allows us to keep our surbordinate relevant and ready to adapt.</p>
             </div>
             <!-- End Icon Blocks -->
           </div>
@@ -38,7 +38,7 @@
                 <i class="icon-education-035 u-line-icon-pro"></i>
               </span>
               <h3 class="h5 g-color-black text-uppercase mb-3">Excellent features</h3>
-              <p class="g-color-gray-dark-v4">We strive to embrace and drive change in our industry which allows us to keep our clients relevant and ready to adapt.</p>
+              <p class="g-color-gray-dark-v4">we guarranty relaible and user-freindly capability in the choice of technology we use.</p>
             </div>
             <!-- End Icon Blocks -->
           </div>
@@ -49,8 +49,8 @@
               <span class="d-block g-color-primary g-font-size-35 g-mb-5">
                 <i class="icon-education-141 u-line-icon-pro"></i>
               </span>
-              <h3 class="h5 g-color-black text-uppercase mb-3">Fully responsive</h3>
-              <p class="g-color-gray-dark-v4">We strive to embrace and drive change in our industry which allows us to keep our clients relevant and ready to adapt.</p>
+              <h3 class="h5 g-color-black text-uppercase mb-3">Hoghly Interactive</h3>
+              <p class="g-color-gray-dark-v4">in ValuedSeed, presentation, simplicity and interactivity is key.</p>
             </div>
             <!-- End Icon Blocks -->
           </div>
@@ -84,7 +84,7 @@
           <div class="col-md-3 col-6 g-mb-50">
             <i class="et-icon-chat display-5 mb-3"></i>
             <div class="js-counter g-font-size-32 mb-2">3495</div>
-            <h4 class="h5 g-font-weight-300 mb-0">Happy Clients</h4>
+            <h4 class="h5 g-font-weight-300 mb-0">Happy Students</h4>
           </div>
           <!-- End Counters -->
 
@@ -92,7 +92,7 @@
           <div class="col-md-3 col-6 g-mb-50">
             <i class="et-icon-lightbulb display-5 mb-3"></i>
             <div class="js-counter g-font-size-32 mb-2">576</div>
-            <h4 class="h5 g-font-weight-300 mb-0">New Ideas</h4>
+            <h4 class="h5 g-font-weight-300 mb-0">Fresh Ideas</h4>
           </div>
           <!-- End Counters -->
         </div>
@@ -102,7 +102,7 @@
 	    <div class="row justify-content-center g-mb-60">
 		    <div class="col-lg-7">
 			    <div class="text-center">
-				    <h2 class="h3 g-color-black text-uppercase mb-2">Meet your creative team</h2>
+				    <h2 class="h3 g-color-black text-uppercase mb-2">Meet our creative team</h2>
 				    	<div class="d-inline-block g-width-35 g-height-2 g-bg-primary mb-2"></div>
 				    <p class="lead mb-0">
 					    We are a team of educational experts focusing on simplicity, personalization, societal growth &amp; development. Somewhere between sophistication and simplicity.
@@ -117,8 +117,8 @@
 	    			<figcaption class="u-block-hover__additional--partially-slide-up g-mx-15">
 	    				<div class="text-center g-bg-white g-pb-20">
 	    					<div class="u-block-hover__visible g-pt-20 g-pb-15 g-y-20">
-	    						<h4 class="h5 g-color-black g-mb-5">Katalina Watson</h4>
-	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Technical Director</em>
+	    						<h4 class="h5 g-color-black g-mb-5">Micheal Jame</h4>
+	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Project Manager</em>
 	    					</div>
 	    					<ul class="list-inline mb-0">
 	    						<li class="list-inline-item">
@@ -147,8 +147,8 @@
 	    			<figcaption class="u-block-hover__additional--partially-slide-up g-mx-15">
 	    				<div class="text-center g-bg-white g-pb-20">
 	    					<div class="u-block-hover__visible g-pt-20 g-pb-15 g-y-20">
-	    						<h4 class="h5 g-color-black g-mb-5">Katalina Watson</h4>
-	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Technical Director</em>
+	    						<h4 class="h5 g-color-black g-mb-5">Adejumo Ezekiel</h4>
+	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">CTO</em>
 	    					</div>
 	    					<ul class="list-inline mb-0">
 	    						<li class="list-inline-item">
@@ -177,8 +177,8 @@
 	    			<figcaption class="u-block-hover__additional--partially-slide-up g-mx-15">
 	    				<div class="text-center g-bg-white g-pb-20">
 	    					<div class="u-block-hover__visible g-pt-20 g-pb-15 g-y-20">
-	    						<h4 class="h5 g-color-black g-mb-5">Katalina Watson</h4>
-	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Technical Director</em>
+	    						<h4 class="h5 g-color-black g-mb-5">Princewill Moses</h4>
+	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Product Manager</em>
 	    					</div>
 	    					<ul class="list-inline mb-0">
 	    						<li class="list-inline-item">
@@ -207,8 +207,8 @@
 	    			<figcaption class="u-block-hover__additional--partially-slide-up g-mx-15">
 	    				<div class="text-center g-bg-white g-pb-20">
 	    					<div class="u-block-hover__visible g-pt-20 g-pb-15 g-y-20">
-	    						<h4 class="h5 g-color-black g-mb-5">Katalina Watson</h4>
-	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Technical Director</em>
+	    						<h4 class="h5 g-color-black g-mb-5">Regina Joyce</h4>
+	    						<em class="d-block g-font-style-normal g-font-size-11 text-uppercase g-color-primary">Education Analyst</em>
 	    					</div>
 	    					<ul class="list-inline mb-0">
 	    						<li class="list-inline-item">
@@ -258,7 +258,7 @@
             <div class="media">
               <img class="d-flex align-self-center rounded-circle g-width-60 g-brd-around g-brd-3 g-brd-white mr-3" src="assets/img-temp/100x100/img16.jpg" alt="Image Description">
               <div class="media-body align-self-center">
-                <h4 class="h6 g-font-weight-700 g-mb-0">Alexandra Pottorf</h4>
+                <h4 class="h6 g-font-weight-700 g-mb-0">Oloruntobi Samuel</h4>
                 <em class="g-color-gray-dark-v4 g-font-style-normal">Web Developer</em>
               </div>
             </div>
@@ -271,7 +271,7 @@
             <div class="media">
               <img class="d-flex align-self-center rounded-circle g-width-60 g-brd-around g-brd-3 g-brd-white mr-3" src="assets/img-temp/100x100/img14.jpg" alt="Image Description">
               <div class="media-body align-self-center">
-                <h4 class="h6 g-font-weight-700 g-mb-0">Bastien Rojanawisut</h4>
+                <h4 class="h6 g-font-weight-700 g-mb-0">Patience Jerry</h4>
                 <em class="g-color-gray-dark-v4 g-font-style-normal">UX/UI Designer</em>
               </div>
             </div>
